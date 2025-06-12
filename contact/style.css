@@ -1,0 +1,48 @@
+@import url("/style.css");
+a#contact::after {
+  width: calc(100% + 10px);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  aspect-ratio: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 12px;
+  transition: all 0.1s ease-in-out;
+}
+.contact:hover {
+  height: 330px;
+}
+
+.contact img {
+  height: 55%;
+  position: relative;
+  top: 20px;
+}
+.contact h4 {
+  position: relative;
+  top: 30px;
+  font-weight: 600;
+}
+.contact h5 {
+  position: relative;
+  top: 30px;
+  color: #555555;
+}
+#x-logo {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 18px;
+  height: calc(55% - 40px);
+}
+#contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  top: calc(50vh - 60px - 121px - 90px);
+}

@@ -1,0 +1,50 @@
+@import url("/text.css");
+@import url("/header.css");
+@import url("/footer.css");
+
+:root {
+  --primary: 330, 100%, 30%; /* #9b0047 */
+  --secondary: 340, 100%, 91%; /* #ffd6e8 */
+  --accent: 350, 100%, 85%; /* #ffb3c6 */
+  --highlight: 0, 0%, 100%; /* #ffffff */
+  --background: 330, 20%, 97%; /* #f8f6f7 */
+  --black: 0, 0%, 10%; /* #1a1a1a */
+  --text-light: 0, 0%, 80%; /* #cccccc */
+  --text: 210, 50%, 1%; /* #010203 */
+  --footer: 210, 10%, 15%; /* #22262a */
+}
+::-webkit-scrollbar {
+  display: none;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--text));
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+.content {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  flex: 1;
+  padding: 0 20px;
+}
+
+@media (max-width: 570px) {
+  nav {
+    display: none;
+  }
+}
