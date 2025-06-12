@@ -4,8 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RBS2</title>
+    <style>
+      .loading {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #f8f6f7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+      .loading img {
+        height: 10%;
+      }
+    </style>
   </head>
   <body>
+    <div class="loading">
+      <img src="/resources/images/loader.gif" alt="loading..." />
+    </div>
+
     <div id="wrapper">
       <div id="header"></div>
       <div class="content">

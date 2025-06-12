@@ -19,4 +19,5 @@ window.onload = onLoad;
 function onLoad() {
   $("#header").load("/resources/html/header.html");
   $("#footer").load("/resources/html/footer.html");
+  $(".loading").css("display", "none");
 }
