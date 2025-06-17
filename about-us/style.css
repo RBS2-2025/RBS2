@@ -10,69 +10,122 @@ a#about-us::after {
 }
 
 .members {
-  width: 100%;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-
-  /* margin-top: 120px; */
-  margin-top: 20px;
+  display: flex;
   position: relative;
-  left: 50%;
+  padding-left: 20px;
+  padding-top: 5px;
+  margin: 0;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
 
-  transform: translateX(-50%);
-  z-index: -10;
+.member-wrapper {
+  position: relative;
+  left: -20px;
+  width: 100vw;
+  height: 65px;
 }
 
 .member {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  background-color: hsl(var(--highlight));
-  width: 80%;
-  height: 120px;
-  padding: 10px;
+  display: inline-block;
+  height: 40px;
+  margin: 10px;
+  aspect-ratio: 4;
   border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  background-color: hsl(var(--highlight));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-.member img {
-  height: 80px;
-  left: 20px;
+
+.members h5 {
   position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
 }
-.mentor img {
-  filter: invert(100%) sepia(100) saturate(100) hue-rotate(340deg);
+
+.scroll-end {
+  display: inline-block;
+  margin-left: 30px;
 }
-.manager img {
-  filter: invert(75%) sepia(100) saturate(100) hue-rotate(10deg);
+
+.member-wrapper::before,
+.member-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  pointer-events: none;
+  z-index: 1;
 }
-.software img {
-  filter: invert(80%) sepia(100) saturate(100) hue-rotate(80deg);
-}
-.hardware img {
-  filter: invert(76%) sepia(100) saturate(100) hue-rotate(170deg);
-}
-h2 {
-  position: relative;
-  top: 15px;
-  left: 30px;
-}
-.member h4 {
-  font-weight: 600;
-}
-.member h5 {
-  color: #555555;
-  text-align: left;
-}
-.texts {
-  display: flex;
-  flex-direction: column-reverse;
-}
-.texts * {
-  position: relative;
+
+.member-wrapper::before {
   left: 0;
+  background: linear-gradient(to right, hsl(var(--background)), transparent);
+}
+
+.member-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, hsl(var(--background)), transparent);
+}
+
+.scrollbar {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 20px;
+  right: 20px;
+  top: 0;
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+  pointer-events: none;
+}
+.thumb {
+  position: absolute;
+  width: 10%;
+  left: 0;
+  top: 0px;
+  height: 6px;
+  background: #999;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+h1 {
+  color: hsl(var(--primary));
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+}
+.ftc {
+  position: relative;
+  text-decoration: underline;
+}
+.ftc:hover::before {
+  content: "First Tech Challenge";
+  font-weight: 600;
+  color: hsl(var(--primary));
+  position: absolute;
+  top: -30px;
+  left: -40px;
+  width: 200px;
+  background-color: hsla(var(--highlight), 0.6);
+  backdrop-filter: blur(6px);
+  border: hsl(var(--highlight)) 2px solid;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 5px hsla(var(--black), 0.1),
+    inset 10px 5px 20px 0px hsla(var(--highlight), 0.4),
+    inset -10px -5px 20px 0px hsla(var(--highlight), 0.4);
+}
+
+.p {
+  margin: 60px 0;
+  padding: 10px;
 }

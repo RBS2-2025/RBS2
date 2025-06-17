@@ -12,25 +12,38 @@ a#contact::after {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   border-radius: 12px;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .contact:hover {
   height: 330px;
+  transform: translateY(-15px);
 }
 
 .contact img {
   height: 55%;
   position: relative;
-  top: 20px;
+  top: 7%;
+}
+.contact #youtube {
+  height: 55%;
+  aspect-ratio: 1;
+  position: relative;
+  top: 7%;
+}
+#youtube img {
+  width: 100%;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .contact h4 {
   position: relative;
-  top: 30px;
+  top: 10%;
   font-weight: 600;
 }
 .contact h5 {
   position: relative;
-  top: 30px;
+  top: 10%;
   color: #555555;
 }
 #x-logo {
@@ -45,4 +58,11 @@ a#contact::after {
   justify-content: space-around;
   position: relative;
   top: calc(50vh - 60px - 121px - 90px);
+}
+h1 {
+  width: fit-content;
+  color: hsl(var(--primary));
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }

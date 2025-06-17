@@ -1,5 +1,9 @@
 @import url(/style.css);
 
+html {
+  font-size: 1vw;
+}
+
 h1,
 h2,
 h3,
@@ -7,27 +11,33 @@ h4,
 h5,
 h6,
 a {
-  color: var(--white);
+  color: hsl(var(--text));
   text-decoration: none;
   margin: 0;
 }
 h1 {
-  font-size: 72px;
+  /* font-size: 72px; */
+  font-size: 4.5rem;
 }
 h2 {
-  font-size: 56px;
+  /* font-size: 56px; */
+  font-size: 3.5rem;
 }
 h3 {
-  font-size: 48px;
+  /* font-size: 48px; */
+  font-size: 3rem;
 }
 h4 {
-  font-size: 36px;
+  /* font-size: 36px; */
+  font-size: 2rem;
 }
 h5 {
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: 1.5rem;
 }
 h6 {
-  font-size: 18px;
+  /* font-size: 16px; */
+  font-size: 1rem;
 }
 h1,
 h2,
@@ -41,4 +51,23 @@ h6 {
 }
 .text-highlight {
   color: var(--primary);
+}
+
+h1.absolute {
+  font-size: 72px;
+}
+h2.absolute {
+  font-size: 56px;
+}
+h3.absolute {
+  font-size: 48px;
+}
+h4.absolute {
+  font-size: 32px;
+}
+h5.absolute {
+  font-size: 24px;
+}
+h6.absolute {
+  font-size: 16px;
 }
