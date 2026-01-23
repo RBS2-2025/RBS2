@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^5.2.1",
-    "express-session": "^1.18.2"
+    "express-session": "^1.18.2",
+    "netlify-cli": "^23.13.5",
+    "serverless-http": "^4.0.0"
   }
 }
