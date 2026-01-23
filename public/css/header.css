@@ -1,0 +1,73 @@
+@import "/css/vars.css";
+html,
+body {
+    margin: 0;
+}
+html {
+    overflow-x: hidden;
+    overscroll-behavior: none;
+}
+
+header {
+    width: 100vw;
+    height: 80px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    background-color: var(--semi-black);
+}
+#logo_mark {
+    height: 60px;
+}
+#logo_text {
+    height: 40px;
+    margin-left: -20px;
+}
+header ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    position: absolute;
+    right: 20px;
+}
+header li {
+    margin: 0 10px;
+}
+header a {
+    font-size: 24px;
+}
+
+footer {
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--semi-black);
+}
+footer a:not(.footerTXTs *) {
+    background-color: var(--white);
+    border-radius: 6px;
+    margin: 0px 10px;
+    height: 40px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.1s ease;
+}
+footer a:hover {
+    scale: 1.1;
+}
+.footerTXTs {
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+}
+footer a img {
+    height: 20px;
+}

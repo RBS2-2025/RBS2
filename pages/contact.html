@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SPIRIT | Contact</title>
+        <link rel="stylesheet" href="/css/header.css" />
+        <link rel="shortcut icon" href="/images/logo_spirit_mark.png" type="image/x-icon" />
+        <style>
+            #landing_image {
+                width: 600px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            #landing_mask {
+                height: calc(0.84 * 500px);
+            }
+            #landing_text {
+                height: calc(0.16 * 500px);
+            }
+            #slogan {
+                margin-top: 20px;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+            }
+            #slogan h1 {
+                position: absolute;
+                font-size: 72px;
+                margin: 0;
+                color: var(--white);
+                line-height: 72px;
+                font-weight: 300;
+                filter: drop-shadow(0 2px 2px #00000044);
+            }
+            #slogan h1 span {
+                color: var(--white);
+                font-weight: 400;
+            }
+            #slogan #kor {
+                transform: scaleY(1) translateX(-50%);
+                transform-origin: top;
+                transition: all 0.1s ease;
+                cursor: default;
+            }
+            #slogan #eng {
+                transform: scaleY(0) translateX(-50%);
+                transform-origin: bottom;
+                transition: all 0.1s ease;
+                cursor: default;
+            }
+            #slogan:hover #kor {
+                transform: scaleY(0) translateX(-50%);
+            }
+            #slogan:hover #eng {
+                transform: scaleY(1) translateX(-50%);
+            }
+            footer {
+                position: absolute;
+                bottom: -60px;
+            }
+            #content {
+                width: 100vw;
+                height: calc(100vh - 80px);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+            }
+            #content a {
+                width: 200px;
+                height: 200px;
+                background-color: var(--white);
+                margin: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                transition: all 0.2s ease;
+            }
+            #content a:hover {
+                scale: 1.1;
+            }
+            #content:has(a:hover) a:not(:hover) {
+                opacity: 0.8;
+            }
+            #content img {
+                width: 160px;
+            }
+        </style>
+        <script src="/js/theme.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="/#" style="text-decoration: none; display: flex; align-items: center"
+                ><img src="/images/logo_spirit_mark.png" class="logo" alt="mask" id="logo_mark" />
+                <img src="/images/logo_spirit_text.png" class="logo" alt="SPIRIT" id="logo_text"
+            /></a>
+            <ul>
+                <li><a href="/#">Home</a></li>
+                <li><a href="/about/#">About us</a></li>
+                <li><a href="/awards/#">Awards</a></li>
+                <li><a href="/contact/#">Contact</a></li>
+            </ul>
+        </header>
+        <div id="content">
+            <a href="https://www.instagram.com/ftc_s.p.i.r.i.t/" target="_blank">
+                <img src="/images/Instagram_Glyph_Gradient.png" alt="instagram" />
+            </a>
+            <a href="https://ftc-events.firstinspires.org/2024/team/25324" target="_blank">
+                <img src="/images/FIRST_Vertical_RGB.png" alt="FTC" />
+            </a>
+            <a href="https://www.youtube.com/@team25324" target="_blank">
+                <img src="/images/youtube_social_icon_red.png" alt="youtube" />
+            </a>
+            <a href="#" onclick="copyEmail()">
+                <img src="/images/Email.png" alt="email" style="filter: brightness(0.1)" />
+            </a>
+        </div>
+        <script>
+            function copyEmail() {
+                const email = "rbs2kla2025@gmail.com";
+                window.navigator.clipboard.writeText(email);
+            }
+        </script>
+    </body>
+</html>

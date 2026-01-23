@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SPIRIT | Awards</title>
+        <link rel="stylesheet" href="/css/header.css" />
+        <link rel="shortcut icon" href="/images/logo_spirit_mark.png" type="image/x-icon" />
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                background-color: var(--semi-black);
+            }
+            #contents {
+                width: 50vw;
+                display: flex;
+                flex-direction: column;
+            }
+            .content details {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .content summary {
+                display: block;
+                width: 50vw;
+                cursor: pointer;
+            }
+            summary::-webkit-details-marker {
+                display: none;
+            }
+            .content summary::before {
+                content: "";
+                position: absolute;
+                border-top: 0.5em solid transparent;
+                border-bottom: 0.5em solid transparent;
+                border-left: 0.75em solid var(--white);
+                transform: translate(-1.1em, 1.5em);
+                transition: all 0.2s ease;
+            }
+            .content details[open] summary:before {
+                transform: translate(-1.1em, 1.5em) rotateZ(90deg);
+            }
+            .content a {
+                text-align: center;
+                display: block;
+                font-size: 22px;
+                text-decoration: underline;
+            }
+            .content ul {
+                list-style-type: none;
+            }
+            .content h3 {
+                font-weight: 200;
+                font-size: 24px;
+                text-align: center;
+            }
+            .images {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-around;
+            }
+            .images img {
+                height: 200px;
+                border: 1px solid var(--white);
+            }
+            footer {
+                position: absolute;
+                bottom: -60px;
+            }
+        </style>
+        <script src="/js/theme.js"></script>
+        <script src="/js/awards.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="/#" style="text-decoration: none; display: flex; align-items: center"
+                ><img src="/images/logo_spirit_mark.png" class="logo" alt="mask" id="logo_mark" />
+                <img src="/images/logo_spirit_text.png" class="logo" alt="SPIRIT" id="logo_text"
+            /></a>
+            <ul>
+                <li><a href="/#">Home</a></li>
+                <li><a href="/about/#">About us</a></li>
+                <li><a href="/awards/#">Awards</a></li>
+                <li><a href="/contact/#">Contact</a></li>
+            </ul>
+        </header>
+
+        <div id="contents"></div>
+
+        <footer>
+            <a href="https://www.instagram.com/ftc_s.p.i.r.i.t/" target="_blank">
+                <img src="/images/Instagram_Glyph_Gradient.png" alt="instagram" style="height: 30px" />
+            </a>
+            <a href="https://ftc-events.firstinspires.org/2024/team/25324" target="_blank">
+                <img src="/images/FIRST_Vertical_RGB.png" alt="FTC" />
+            </a>
+            <a href="https://www.youtube.com/@team25324" target="_blank">
+                <img src="/images/youtube_social_icon_red.png" alt="youtube" />
+            </a>
+            <a href="#" onclick="copyEmail()">
+                <img src="/images/Email.png" alt="email" style="height: 30px; filter: brightness(0.1)" />
+            </a>
+            <div class="footerTXTs">
+                <div class="flaticon">
+                    <a href="https://www.flaticon.com/free-icons/email" title="email icons"
+                        >Email icons created by Freepik - Flaticon</a
+                    >
+                </div>
+            </div>
+        </footer>
+        <script>
+            function copyEmail() {
+                const email = "rbs2kla2025@gmail.com";
+                window.navigator.clipboard.writeText(email);
+            }
+        </script>
+    </body>
+</html>
