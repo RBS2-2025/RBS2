@@ -41,7 +41,7 @@ const engRoles = {
 
 async function createCard(member) {
     const card = document.createElement("div");
-    const src = await loadProfileImage(member.name);
+    const src = `/images/face/${member.eng}.png`;
     card.classList.add("card");
     card.dataset.korName = member.name;
     card.dataset.korRole = member.role;

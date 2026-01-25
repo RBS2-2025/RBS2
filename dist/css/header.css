@@ -7,6 +7,10 @@ html {
     overflow-x: hidden;
     overscroll-behavior: none;
 }
+body {
+    display: flex;
+    min-height: 100vh;
+}
 
 header {
     width: 100vw;
@@ -48,6 +52,8 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: var(--semi-black);
+    position: relative;
+    bottom: -60px;
 }
 footer a:not(.footerTXTs *) {
     background-color: var(--white);
@@ -70,4 +76,8 @@ footer a:hover {
 }
 footer a img {
     height: 20px;
+}
+
+#contents {
+    flex: 1;
 }

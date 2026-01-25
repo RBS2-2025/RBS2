@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SPIRIT | Contact</title>
+        <title>SPIRIT | Home</title>
         <link rel="stylesheet" href="/css/header.css" />
         <link rel="shortcut icon" href="/images/logo_spirit_mark.png" type="image/x-icon" />
         <style>
@@ -58,38 +58,6 @@
             #slogan:hover #eng {
                 transform: scaleY(1) translateX(-50%);
             }
-            footer {
-                position: absolute;
-                bottom: -60px;
-            }
-            #content {
-                width: 100vw;
-                height: calc(100vh - 80px);
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-around;
-            }
-            #content a {
-                width: 200px;
-                height: 200px;
-                background-color: var(--white);
-                margin: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 20px;
-                transition: all 0.2s ease;
-            }
-            #content a:hover {
-                scale: 1.1;
-            }
-            #content:has(a:hover) a:not(:hover) {
-                opacity: 0.8;
-            }
-            #content img {
-                width: 160px;
-            }
         </style>
         <script src="/js/theme.js"></script>
     </head>
@@ -106,9 +74,24 @@
                 <li><a href="/contact/#">Contact</a></li>
             </ul>
         </header>
-        <div id="content">
+        <div id="contents">
+            <div id="landing_image">
+                <img src="/images/logo_spirit_mark.png" alt="MASK" id="landing_mask" />
+                <h2 style="color: var(--gray-light); cursor: default">
+                    team 25323
+                    <span style="color: var(--gray); font-weight: 400">|</span> team 25324
+                </h2>
+                <img src="/images/logo_spirit_text.png" alt="SPIRIT" id="landing_text" />
+                <div id="slogan">
+                    <h1 id="kor"><span>혼</span>을 담은 로봇</h1>
+                    <h1 id="eng">A robot with a <span>spirit</span></h1>
+                </div>
+            </div>
+        </div>
+
+        <footer>
             <a href="https://www.instagram.com/ftc_s.p.i.r.i.t/" target="_blank">
-                <img src="/images/Instagram_Glyph_Gradient.png" alt="instagram" />
+                <img src="/images/Instagram_Glyph_Gradient.png" alt="instagram" style="height: 30px" />
             </a>
             <a href="https://ftc-events.firstinspires.org/2024/team/25324" target="_blank">
                 <img src="/images/FIRST_Vertical_RGB.png" alt="FTC" />
@@ -117,9 +100,16 @@
                 <img src="/images/youtube_social_icon_red.png" alt="youtube" />
             </a>
             <a href="#" onclick="copyEmail()">
-                <img src="/images/Email.png" alt="email" style="filter: brightness(0.1)" />
+                <img src="/images/Email.png" alt="email" style="height: 30px; filter: brightness(0.1)" />
             </a>
-        </div>
+            <div class="footerTXTs">
+                <div class="flaticon">
+                    <a href="https://www.flaticon.com/free-icons/email" title="email icons"
+                        >Email icons created by Freepik - Flaticon</a
+                    >
+                </div>
+            </div>
+        </footer>
         <script>
             function copyEmail() {
                 const email = "rbs2kla2025@gmail.com";

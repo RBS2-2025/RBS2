@@ -3,67 +3,72 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SPIRIT | Home</title>
+        <title>SPIRIT | Awards</title>
         <link rel="stylesheet" href="/css/header.css" />
         <link rel="shortcut icon" href="/images/logo_spirit_mark.png" type="image/x-icon" />
         <style>
-            #landing_image {
-                width: 600px;
+            body {
                 display: flex;
                 align-items: center;
                 flex-direction: column;
+                background-color: var(--semi-black);
             }
-            #landing_mask {
-                height: calc(0.84 * 500px);
+            #contents {
+                width: 50vw;
+                display: flex;
+                flex-direction: column;
             }
-            #landing_text {
-                height: calc(0.16 * 500px);
+            .content details {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
-            #slogan {
+            .content summary {
+                display: block;
+                width: 50vw;
+                cursor: pointer;
+            }
+            summary::-webkit-details-marker {
+                display: none;
+            }
+            .content summary::before {
+                content: "";
+                position: absolute;
+                border-top: 0.5em solid transparent;
+                border-bottom: 0.5em solid transparent;
+                border-left: 0.75em solid var(--white);
+                transform: translate(-1.1em, 1.5em);
+                transition: all 0.2s ease;
+            }
+            .content details[open] summary:before {
+                transform: translate(-1.1em, 1.5em) rotateZ(90deg);
+            }
+            .content a {
+                text-align: center;
+                display: block;
+                font-size: 22px;
+                text-decoration: underline;
+            }
+            .content ul {
+                list-style-type: none;
+            }
+            .content h3 {
+                font-weight: 200;
+                font-size: 24px;
+                text-align: center;
+            }
+            .images {
                 margin-top: 20px;
-                -webkit-user-select: none;
-                -khtml-user-select: none;
-                -moz-user-select: none;
-                -o-user-select: none;
-                user-select: none;
+                display: flex;
+                justify-content: space-around;
             }
-            #slogan h1 {
-                position: absolute;
-                font-size: 72px;
-                margin: 0;
-                color: var(--white);
-                line-height: 72px;
-                font-weight: 300;
-                filter: drop-shadow(0 2px 2px #00000044);
-            }
-            #slogan h1 span {
-                color: var(--white);
-                font-weight: 400;
-            }
-            #slogan #kor {
-                transform: scaleY(1) translateX(-50%);
-                transform-origin: top;
-                transition: all 0.1s ease;
-                cursor: default;
-            }
-            #slogan #eng {
-                transform: scaleY(0) translateX(-50%);
-                transform-origin: bottom;
-                transition: all 0.1s ease;
-                cursor: default;
-            }
-            #slogan:hover #kor {
-                transform: scaleY(0) translateX(-50%);
-            }
-            #slogan:hover #eng {
-                transform: scaleY(1) translateX(-50%);
-            }
-            footer {
-                position: absolute;
-                bottom: -60px;
+            .images img {
+                height: 200px;
+                border: 1px solid var(--white);
             }
         </style>
         <script src="/js/theme.js"></script>
+        <script src="/js/awards.js"></script>
     </head>
     <body>
         <header>
@@ -79,18 +84,7 @@
             </ul>
         </header>
 
-        <div id="landing_image">
-            <img src="/images/logo_spirit_mark.png" alt="MASK" id="landing_mask" />
-            <h2 style="color: var(--gray-light); cursor: default">
-                team 25323
-                <span style="color: var(--gray); font-weight: 400">|</span> team 25324
-            </h2>
-            <img src="/images/logo_spirit_text.png" alt="SPIRIT" id="landing_text" />
-            <div id="slogan">
-                <h1 id="kor"><span>혼</span>을 담은 로봇</h1>
-                <h1 id="eng">A robot with a <span>spirit</span></h1>
-            </div>
-        </div>
+        <div id="contents"></div>
 
         <footer>
             <a href="https://www.instagram.com/ftc_s.p.i.r.i.t/" target="_blank">
