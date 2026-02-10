@@ -19,7 +19,7 @@ function copyEmail() {
     const box = document.createElement("div");
     box.style =
         "color: var(--white); font-size: 2em; background-color:#000000aa; padding: 2px 15px; position:sticky; bottom: calc(100vh - 140px); border-radius: 4px; transition: all 1s ease;opacity:1;";
-    box.innerText = "이메일이 복사되었습니다.";
+    box.innerText = "✓ 이메일이 복사되었습니다.";
     document.body.appendChild(box);
     setInterval(() => {
         box.style.opacity = "0";
