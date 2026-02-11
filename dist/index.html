@@ -1,114 +1,155 @@
-<!doctype html>
-<html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SPIRIT | Home</title>
-        <link rel="stylesheet" href="/css/header.css" />
-        <link rel="shortcut icon" href="/images/logo_spirit_mark.png" type="image/x-icon" />
-        <style>
-            #landing_image {
-                width: 600px;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
+<!DOCTYPE html>
+<html lang="ko" class="overflow-x-hidden overscroll-none">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPIRIT | Home</title>
+    <link rel="shortcut icon" href="/images/logo_spirit_mark.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/main.js"></script>
+    <style type="text/tailwindcss">
+        @layer components {
+            /* 햄버거 버튼 */
+            .hamburger {
+                @apply flex flex-col justify-center items-center w-10 h-10 cursor-pointer relative z-[101];
             }
-            #landing_mask {
-                height: calc(0.84 * 500px);
+
+            .hamburger span {
+                @apply block w-6 h-0.5 bg-white transition-all duration-300 ease-in-out;
             }
-            #landing_text {
-                height: calc(0.16 * 500px);
+
+            .hamburger span:not(:last-child) {
+                @apply mb-1;
             }
-            #slogan {
-                margin-top: 20px;
-                -webkit-user-select: none;
-                -khtml-user-select: none;
-                -moz-user-select: none;
-                -o-user-select: none;
-                user-select: none;
+
+            /* 햄버거 열렸을 때 */
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
             }
-            #slogan h1 {
-                position: absolute;
-                font-size: 72px;
-                margin: 0;
-                color: var(--white);
-                line-height: 72px;
-                font-weight: 300;
-                filter: drop-shadow(0 2px 2px #00000044);
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
             }
-            #slogan h1 span {
-                color: var(--white);
-                font-weight: 400;
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
             }
-            #slogan #kor {
-                transform: scaleY(1) translateX(-50%);
-                transform-origin: top;
-                transition: all 0.1s ease;
-                cursor: default;
+
+            /* 모바일 메뉴 */
+            .mobile-menu {
+                @apply fixed top-20 right-0 w-64 bg-[#2a2b2e] shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-[99];
             }
-            #slogan #eng {
-                transform: scaleY(0) translateX(-50%);
-                transform-origin: bottom;
-                transition: all 0.1s ease;
-                cursor: default;
+
+            .mobile-menu.active {
+                @apply translate-x-0;
             }
-            #slogan:hover #kor {
-                transform: scaleY(0) translateX(-50%);
+
+            .mobile-menu ul {
+                @apply flex flex-col p-0 m-0 list-none;
             }
-            #slogan:hover #eng {
-                transform: scaleY(1) translateX(-50%);
+
+            .mobile-menu li {
+                @apply border-b border-gray-700;
             }
-        </style>
-        <script src="/js/main.js"></script>
-    </head>
-    <body>
-        <header>
-            <a href="/#" style="text-decoration: none; display: flex; align-items: center"
-                ><img src="/images/logo_spirit_mark.png" class="logo" alt="mask" id="logo_mark" />
-                <img src="/images/logo_spirit_text.png" class="logo" alt="SPIRIT" id="logo_text"
-            /></a>
-            <ul>
-                <li><a href="/#">Home</a></li>
-                <li><a href="/about/#">About us</a></li>
-                <li><a href="/awards/#">Awards</a></li>
-                <li><a href="/contact/#">Contact</a></li>
-            </ul>
-        </header>
-        <div id="contents">
-            <div id="landing_image">
-                <img src="/images/logo_spirit_mark.png" alt="MASK" id="landing_mask" />
-                <h2 style="color: var(--gray-light); cursor: default">
-                    team 25323
-                    <span style="color: var(--gray); font-weight: 400">|</span> team 25324
-                </h2>
-                <img src="/images/logo_spirit_text.png" alt="SPIRIT" id="landing_text" />
-                <div id="slogan">
-                    <h1 id="kor"><span>혼</span>을 담은 로봇</h1>
-                    <h1 id="eng">A robot with a <span>spirit</span></h1>
-                </div>
+
+            .mobile-menu a {
+                @apply block px-6 py-4 text-white hover:bg-[#3a3b3e] transition-colors;
+            }
+        }
+    </style>
+</head>
+<body class="m-0 flex flex-col min-h-screen bg-[#1f2022] text-white">
+
+    <header class="w-screen h-20 sticky top-0 left-0 z-[100] flex items-center justify-between bg-[#1f2022] shadow-lg px-4">
+        <a href="/#" class="flex items-center no-underline">
+            <img src="/images/logo_spirit_mark.png" class="h-16" alt="mask" id="logo_mark" />
+            <img src="/images/logo_spirit_text.png" class="h-10 -ml-5" alt="SPIRIT" id="logo_text" />
+        </a>
+        
+        <!-- 데스크톱 메뉴 -->
+        <ul class="hidden md:flex flex-row list-none">
+            <li class="mx-2.5"><a href="/#" class="text-2xl text-white hover:text-gray-300 transition-colors">Home</a></li>
+            <li class="mx-2.5"><a href="/about.html" class="text-2xl text-white hover:text-gray-300 transition-colors">About us</a></li>
+            <li class="mx-2.5"><a href="/awards.html" class="text-2xl text-white hover:text-gray-300 transition-colors">Awards</a></li>
+            <li class="mx-2.5"><a href="/contact.html" class="text-2xl text-white hover:text-gray-300 transition-colors">Contact</a></li>
+        </ul>
+
+        <!-- 햄버거 버튼 (모바일) -->
+        <div class="hamburger md:hidden" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- 모바일 메뉴 -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="/#" onclick="toggleMenu()">Home</a></li>
+            <li><a href="/about" onclick="toggleMenu()">About us</a></li>
+            <li><a href="/awards" onclick="toggleMenu()">Awards</a></li>
+            <li><a href="/contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 본문 -->
+    <div id="contents" class="flex-1 flex justify-center items-center w-full">
+        <div id="landing_image" class="w-full max-w-xl flex flex-col items-center">
+            
+            <img src="/images/logo_spirit_mark.png" alt="MASK" id="landing_mask" class="h-96 object-contain" />
+            
+            <h2 class="text-[#e9ecef] cursor-default text-2xl my-5 font-bold">
+                team 25323
+                <span class="text-[#adb5bd] font-normal mx-2">|</span> 
+                team 25324
+            </h2>
+            
+            <img src="/images/logo_spirit_text.png" alt="SPIRIT" id="landing_text" class="h-20 object-contain" />
+            
+            <div id="slogan" class="group relative mt-5 select-none h-20 w-full text-center">
+                <h1 id="kor" class="absolute w-full text-4xl leading-10 font-light text-white drop-shadow-md 
+                            origin-top transition-transform duration-100 ease-in-out scale-y-100 
+                            group-hover:scale-y-0">
+                    <span class="font-normal">혼</span>을 담은 로봇
+                </h1>
+                <h1 id="eng" class="absolute w-full text-4xl leading-10 font-light text-white drop-shadow-md 
+                            origin-bottom transition-transform duration-100 ease-in-out scale-y-0 
+                            group-hover:scale-y-100">
+                    A robot with a <span class="font-normal">spirit</span>
+                </h1>
             </div>
         </div>
+    </div>
 
-        <footer>
-            <a href="https://www.instagram.com/ftc_s.p.i.r.i.t/" target="_blank">
-                <img src="/images/Instagram_Glyph_Gradient.png" alt="instagram" style="height: 30px" />
+    <footer class="h-16 w-screen flex items-center justify-center bg-[#1f2022] relative z-10">
+        <div class="flex">
+            <a href="https://www.instagram.com/ftc_s.p.i.r.i.t/" target="_blank" 
+               class="bg-white rounded-md mx-2.5 h-10 w-10 flex items-center justify-center transition-transform duration-100 ease-linear hover:scale-110">
+                <img src="/images/Instagram_Glyph_Gradient.png" alt="instagram" class="h-5" />
             </a>
-            <a href="https://ftc-events.firstinspires.org/2024/team/25324" target="_blank">
-                <img src="/images/FIRST_Vertical_RGB.png" alt="FTC" />
+            <a href="https://ftc-events.firstinspires.org/2024/team/25324" target="_blank"
+               class="bg-white rounded-md mx-2.5 h-10 w-10 flex items-center justify-center transition-transform duration-100 ease-linear hover:scale-110">
+                <img src="/images/FIRST_Vertical_RGB.png" alt="FTC" class="h-5 object-contain" />
             </a>
-            <a href="https://www.youtube.com/@team25324" target="_blank">
-                <img src="/images/youtube_social_icon_red.png" alt="youtube" />
+            <a href="https://www.youtube.com/@team25324" target="_blank"
+               class="bg-white rounded-md mx-2.5 h-10 w-10 flex items-center justify-center transition-transform duration-100 ease-linear hover:scale-110">
+                <img src="/images/youtube_social_icon_red.png" alt="youtube" class="h-5 object-contain" />
             </a>
-            <a href="#" onclick="copyEmail()">
-                <img src="/images/Email.png" alt="email" style="height: 30px; filter: brightness(0.1)" />
+            <a href="#" onclick="copyEmail()"
+               class="bg-white rounded-md mx-2.5 h-10 w-10 flex items-center justify-center transition-transform duration-100 ease-linear hover:scale-110">
+                <img src="/images/Email.png" alt="email" class="h-5 brightness-0" />
             </a>
-            <div class="footerTXTs">
-                <div class="flaticon">
-                    <a href="https://www.flaticon.com/free-icons/email" title="email icons"
-                        >Email icons created by Freepik - Flaticon</a
-                    >
-                </div>
-            </div>
-        </footer>
-    </body>
+        </div>
+        
+    </footer>
+
+    <div id="Alert" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/60">
+        <div class="w-80 max-w-[90%] rounded-xl bg-[#2a2b2e] p-6 text-center text-white shadow-lg">
+            <p id="AlertMessage" class="text-base leading-6"></p>
+            <button id="AlertClose" class="mt-4 inline-flex items-center justify-center rounded-md bg-white/10 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-white/20">확인</button>
+        </div>
+    </div>
+
+</body>
+
 </html>
