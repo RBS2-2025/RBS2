@@ -2,7 +2,11 @@
   publish = "dist"
   functions = "netlify/functions"
 
+[functions]
+  external_node_modules = ["express"]
+
 [[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/index/"
+  force = true
+  from = "/api/*"
   status = 200
+  to = "/.netlify/functions/api/:splat"
