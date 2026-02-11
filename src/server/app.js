@@ -18,12 +18,4 @@ app.use(
     }),
 );
 
-// 정적 파일 제공
-app.use(express.static(path.join(__dirname, "../../private")));
-
-// 루트 경로에서 index.html 제공
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../../index.html"));
-});
-
 module.exports = app;
