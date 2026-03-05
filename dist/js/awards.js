@@ -2,6 +2,18 @@
 
 function onLoad() {
     createCard(
+        2023,
+        [
+            "South Korea Championship - 3rd Place Control Award",
+            "South Korea Championship - Finalist Alliance - Captain",
+        ],
+        [
+            
+        ],
+        [], 
+        "CENTERSTAGE"
+    );
+    createCard(
         2024,
         [
             "South Korea Championship - 3rd Place Inspire Award",
@@ -20,9 +32,9 @@ function onLoad() {
             "South Korea Championship - Finalist Alliance - Captain",
         ],
         [
-            "#"
+            
         ],
-        ["/images/awards/2025/design.png", "/images/awards/2025/robot.png"], 
+        [], 
         "DECODE"
     );
 }
