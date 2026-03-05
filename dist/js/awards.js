@@ -4,7 +4,7 @@ function onLoad() {
     createCard(
         2023,
         [
-            "South Korea Championship - 3rd Place Control Award",
+            "South Korea Championship - Control Award",
             "South Korea Championship - Finalist Alliance - Captain",
         ],
         [
