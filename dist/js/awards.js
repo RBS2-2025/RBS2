@@ -34,7 +34,7 @@ function onLoad() {
         [
             
         ],
-        [], 
+        ["/images/awards/2025/design.png"], 
         "DECODE"
     );
 }
