@@ -20,17 +20,18 @@ const members = [
     // { name: "황선욱", role: "코치", eng: "S.W Hwang", team: "seniors" },
     // { name: "손태웅", role: "코치", eng: "T.W Son", team: "seniors" },
     // { name: "유준선", role: "멘토", eng: "J.S Yu", team: "seniors" },
-    // { name: "최성원", role: "멘토", eng: "S.W Choi", team: "seniors" },
+    { name: "최성원", role: "코치", eng: "S.W Choi", team: "seniors" },
     // { name: "성우현", role: "소프트웨어", eng: "W.H Sung", team: "25324" },
     // { name: "서민규", role: "하드웨어", eng: "M.G Seo", team: "25324" },
     // { name: "이다훈", role: "소프트웨어", eng: "D.H Lee", team: "25324" },
     // { name: "이명재", role: "하드웨어", eng: "M.J Lee", team: "25324" },
     // { name: "이상훈", role: "하드웨어", eng: "S.H Lee", team: "25324" },
-    { name: "박서우", role: "소프트웨어", eng: "S.W Park", team: "25324" },
     { name: "한은율", role: "하드웨어", eng: "E.Y Han", team: "25324" },
     { name: "송하은", role: "하드웨어", eng: "H.E Song", team: "25324" },
     { name: "신소민", role: "매니저", eng: "S.M Shin", team: "25324" },
-    { name: "이태율", role: "매니저", eng: "T.Y Lee", team: "25324" },
+    { name: "박서우", role: "소프트웨어", eng: "S.W Park", team: "25324" },
+    { name: "이태율", role: "소프트웨어", eng: "T.Y Lee", team: "25324" },
+
 
 ];
 
