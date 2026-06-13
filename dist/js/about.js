@@ -26,11 +26,12 @@ const members = [
     // { name: "이다훈", role: "소프트웨어", eng: "D.H Lee", team: "25324" },
     // { name: "이명재", role: "하드웨어", eng: "M.J Lee", team: "25324" },
     // { name: "이상훈", role: "하드웨어", eng: "S.H Lee", team: "25324" },
+    { name: "박서우", role: "소프트웨어", eng: "S.W Park", team: "25324" },
     { name: "한은율", role: "하드웨어", eng: "E.Y Han", team: "25324" },
     { name: "송하은", role: "하드웨어", eng: "H.E Song", team: "25324" },
+    { name: "이태율", role: "하드웨어", eng: "T.Y Lee", team: "25324" },
     { name: "신소민", role: "매니저", eng: "S.M Shin", team: "25324" },
-    { name: "박서우", role: "소프트웨어", eng: "S.W Park", team: "25324" },
-    { name: "이태율", role: "소프트웨어", eng: "T.Y Lee", team: "25324" },
+
 
 
 ];
